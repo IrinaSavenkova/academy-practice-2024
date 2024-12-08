@@ -1,24 +1,17 @@
-
-
-  def word_manipulation(word)
-    new_word = word
-    word_length = word.length
-    word = word.downcase.lstrip
-    if(word.end_with?("cs"))
+def word_manipulation(word)
     
-      puts 2 ** word_length
+  if(word.strip.downcase.end_with?("cs"))
     
-    else
-      puts new_word.reverse
-    end
+    puts 2 ** word.length
     
-    
+  else
+    puts word.strip.reverse
   end
+    
+end
 
-
-
-  print "Введите любое слово: "
-  input_word = gets.to_s.chomp
-  word_manipulation(input_word)
+print "Введите любое слово: "
+input_word = gets.chomp
+word_manipulation(input_word)
   
   
